@@ -13,7 +13,7 @@ class MyWidget(QMainWindow):
         uic.loadUi('main.ui', self)
         self.con = sqlite3.connect('coffee.db')
         self.cur = self.con.cursor()
-        self.f_show = []
+        self.f_show = list()
         self.loadTable()
 
     def loadTable(self):
